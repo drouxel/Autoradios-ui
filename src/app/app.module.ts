@@ -6,16 +6,22 @@ import { AppComponent } from './app.component';
 import { CarMakersComponent } from './car-makers/car-makers.component';
 import {HomeModule} from './home/home.module';
 import {HomeComponent} from './home/home.component';
+import { CarRadioCardComponent } from './_shared/car-radio-card/car-radio-card.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CarMakersComponent
+    CarMakersComponent,
+    CarRadioCardComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HomeModule
+    HomeModule,
+    BrowserAnimationsModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
