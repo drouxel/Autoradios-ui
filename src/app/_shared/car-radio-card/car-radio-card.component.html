@@ -1,4 +1,4 @@
-<mat-card class="car-radio-card" (click)="action(item.id)">
-    <mat-card-title>{{item.title}}</mat-card-title>
-    <img mat-card-md-image src="{{item.imageSrc}}">
+<mat-card class="car-radio-card" (click)="submitAction(item.id)">
+    <mat-card-title *ngIf="item.title">{{item.title }}</mat-card-title>
+    <img *ngIf="item.imageSrc" mat-card-md-image src="{{item.imageSrc }}">
 </mat-card>

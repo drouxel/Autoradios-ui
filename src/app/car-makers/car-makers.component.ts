@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {CardItem} from '../../assets/context/context.interface';
 
 @Component({
   selector: 'app-car-makers',
@@ -6,10 +7,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./car-makers.component.scss']
 })
 export class CarMakersComponent implements OnInit {
-
-  constructor() { }
+  public items: CardItem[];
+  constructor() {
+    this.items = [
+      {
+        id: '1',
+        title: 'Alfa Romeo',
+        imageSrc: '../../assets/carmaker/Logo_Alfa_Romeo.png'
+      }
+    ];
+  }
 
   ngOnInit(): void {
+    console.log(this.items);
   }
 
 }

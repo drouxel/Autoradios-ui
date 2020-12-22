@@ -1,4 +1,4 @@
-import {Component, Input, OnInit, Output, EventEmitter} from '@angular/core';
+import {Component, Input, Output, EventEmitter} from '@angular/core';
 import {CardItem} from '../../../assets/context/context.interface';
 
 @Component({
@@ -6,12 +6,17 @@ import {CardItem} from '../../../assets/context/context.interface';
   templateUrl: './car-radio-card.component.html',
   styleUrls: ['./car-radio-card.component.scss']
 })
-export class CarRadioCardComponent implements OnInit {
+export class CarRadioCardComponent  {
 
-  @Input() public item: CardItem | undefined;
+  @Input()
+  public item!: CardItem;
   @Output() public action = new EventEmitter<string>();
 
-  ngOnInit(): void {
-  }
+  constructor() {}
 
+
+  public submitAction(id: string): void
+  {
+    this.action.next(id);
+  }
 }
