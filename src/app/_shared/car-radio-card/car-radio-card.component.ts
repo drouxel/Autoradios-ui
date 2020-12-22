@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit, Output, EventEmitter} from '@angular/core';
+import {CardItem} from '../../../assets/context/context.interface';
 
 @Component({
   selector: 'app-car-radio-card',
@@ -7,7 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CarRadioCardComponent implements OnInit {
 
-  constructor() { }
+  @Input() public item: CardItem | undefined;
+  @Output() public action = new EventEmitter<string>();
 
   ngOnInit(): void {
   }

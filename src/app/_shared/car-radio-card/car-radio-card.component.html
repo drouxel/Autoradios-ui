@@ -1,4 +1,4 @@
-<mat-card class="car-radio-card">
-    <mat-card-title>Alfa Romeo</mat-card-title>
-    <img mat-card-md-image src="../../../assets/carmaker/Logo_Alfa_Romeo.png">
+<mat-card class="car-radio-card" (click)="action(item.id)">
+    <mat-card-title>{{item.title}}</mat-card-title>
+    <img mat-card-md-image src="{{item.imageSrc}}">
 </mat-card>
