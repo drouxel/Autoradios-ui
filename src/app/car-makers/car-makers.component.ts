@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {CardItem} from '../../assets/context/context.interface';
+import {CarMakerService} from '../services/car-maker.service';
+import {Observable, of} from 'rxjs';
 
 @Component({
   selector: 'app-car-makers',
@@ -8,18 +10,14 @@ import {CardItem} from '../../assets/context/context.interface';
 })
 export class CarMakersComponent implements OnInit {
   public items: CardItem[];
-  constructor() {
-    this.items = [
-      {
-        id: '1',
-        title: 'Alfa Romeo',
-        imageSrc: '../../assets/carmaker/Logo_Alfa_Romeo.png'
-      }
-    ];
+  constructor(
+    private carMakerService: CarMakerService
+  ) {
+    this.items = this.carMakerService.getCarMakersAsCardItems();
   }
 
   ngOnInit(): void {
-    console.log(this.items);
+
   }
 
 }
