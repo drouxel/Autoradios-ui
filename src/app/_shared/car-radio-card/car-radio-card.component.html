@@ -1,4 +1,6 @@
 <mat-card class="car-radio-card" (click)="submitAction(item.id)">
-    <mat-card-title *ngIf="item.title">{{item.title }}</mat-card-title>
-    <img *ngIf="item.imageSrc" mat-card-md-image src="{{item.imageSrc }}">
+  <mat-card-content class="row">
+    <mat-card-title *ngIf="item.title" >{{item.title }}</mat-card-title>
+  </mat-card-content>
+    <img *ngIf="item.imageSrc" mat-card-md-image src="{{item.imageSrc }}" >
 </mat-card>
