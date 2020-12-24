@@ -1,0 +1,15 @@
+.car-radio-card{
+  width: 200px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 10px;
+  box-shadow: 4px 4px gray;
+  border-radius: 15px;
+}
+.row{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
